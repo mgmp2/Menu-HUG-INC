@@ -1,0 +1,74 @@
+body{
+    width: 1000px;
+    position: relative;
+    /*background-color: #FFEB3B;*/
+}
+.box-header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  box-sizing: border-box;
+  background-color: #d4cece  ;
+  padding: 20px;
+}
+
+.logo {
+  background-image: url("http://img.new.livestream.com/accounts/000000000009dc31/7d0306c1-f2c0-4ad0-ba05-dce7528539ff.png");
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: contain;
+  padding: 6% 14%;
+}
+.hamb:focus{
+  content: "hola";
+}
+.hamb {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  background-color: #ff027c;
+  width: 20px;
+  height: 4px;
+  right: 7%;
+}
+
+.hamb::before{
+  position: relative;
+  top: -16x;
+  width: 20px;
+  height: 4px;
+  content: "";
+  display: inline-block;
+  background-color: #ff027c;
+}
+.hamb::after{
+  position: relative;
+  top: -23px;
+  content: "";
+  display: inline-block;
+  background-color: #ff027c   ;
+  width: 20px;
+  height: 4px;
+}
+.hamb:hover{
+  transition: top 0.5s;
+}
+.active{
+  visibility: visible!important;
+}
+.overlay {
+  visibility: hidden;
+    width: 300px;
+    height: 200px;
+    line-height: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -150px;
+    background-color: rgba(241,12,209,0.45);
+    border-radius: 5px;
+    text-align: center;
+    z-index: 11;
+}
