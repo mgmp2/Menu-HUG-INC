@@ -1,0 +1,47 @@
+/* GRID */
+#lista li{
+  display: inline-block;
+}
+#coders{
+  margin-top: 100px;
+  text-align: center;
+
+}
+figure img{
+  width: 350px;
+  height:350px;
+}
+li figure{
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+.box figcaption > span{
+  position: absolute;
+  font-size: 40px;
+  display: table-cell;
+  vertical-align: middle;
+  top: 32%;
+  left: 10%;
+  color: white;
+
+}
+
+.sombra{
+  position: absolute;
+  width: 350px;
+  height:350px;
+  /*z-index: 200;*/
+}
+.sombra:hover{
+  background-color: rgba(249, 169, 26, 0.52);
+  z-index: 600;
+
+}
+.box figure figcaption{
+  opacity: 1;
+}
+
+.tile figure span{
+  text-align: center;
+}
