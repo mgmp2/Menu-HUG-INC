@@ -82,3 +82,19 @@ nav .menu{
   transition: top 0.4s;
 }
 /*END HAMBURGUER*/
+/*START OVERLAY */
+.open .menu{
+  background: none!important; /*remove the main line of hamburger*/
+}
+.open .menu::after{ /*second line */
+  top: 0!important; /* move up */
+  background: #fff !important; /*change color */
+  transform: rotate(45deg);
+}
+.open .menu::before{
+  top: 0!important;
+  background: #fff !important; /*change color */
+  transform: rotate(-45deg);
+
+}
+/*FINISH OVERLAY */
