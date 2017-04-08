@@ -1,9 +1,12 @@
-/* GRID */
+h3 {
+  text-align: center;
+  font-size: 49px;
+
+  }/* GRID */
 div .grid{
   display: inline-block;
 }
 #coders{
-  margin-top: 100px;
   text-align: center;
   position: relative;
 
@@ -68,17 +71,14 @@ img{
   height: 300px;
     width: 100%;
 }
-body {
-	font-family: monospace;
-  margin: 0px;
-}
+/*letters*/
 .contenedor {
 	margin: auto;
 	display: table;
 }
 
 h1 {
-  margin-top: 30%;
+  margin-top: 17%;
 	position: relative;
 	float: left;
 	background: black;

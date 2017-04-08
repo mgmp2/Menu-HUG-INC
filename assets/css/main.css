@@ -1,8 +1,13 @@
-body{
+body {
+	font-family: monospace;
   margin: 0px;
-  }/*Direct style for nav tag*/
-nav{
-  top: 0;
+  box-sizing: border-box;
+}
+/*Navgation general styles*/
+/*Background Menu*/
+
+nav {
+  top : 0;
   left: 0;
   width: 100%;
   color: #fff;
@@ -11,49 +16,49 @@ nav{
   margin-top: 0;
   position: fixed;
   padding-top: 0px;
-  background: none;
-  transition: all 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+  background:rgba(247, 182, 23, 0.81);
+  transition: all 0.65 cubic-bezier(0.7, 0.01, 0.3, 1);
 }
-/*Javascript style toggle for menu appear and desappear*/
-.header-in{
-  background-color: rgba(247, 182, 23, 0.81);
-}
-/**/
-/*Navgation general styles*/
-/*Background Menu*/
+
 nav .nav-background {
   top: 0px;
-  opacity:0;
+  opacity:0; /*disapeear */
   width: 100%;
-  height: 100%;
-  z-index: 1500;
+  height: 100%
+  z-index: 1000;
   display: table;
   background: none;
   position: absolute;
   transition: background-color 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
 }
+.active{
+  height: 100%;
+}
 nav.open .nav-background {
-  opacity: 1;
+  opacity: 1; /*APPEAR MY LIST */
   background-color: rgba(247, 182, 23, 0.81) !important;
   transition: background-color 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
 }
 nav.open {
-  height: 100%;
+  height: 100%; /* GET ALL OF PAGE */
   transition: none;
   -o-transition: none;
   -moz-transition: none;
   -webkit-transition: none;
 }
+.header-in{
+  background-color: rgba(247, 182, 23, 0.81);
+}
 /*Navigation list*/
 nav ul {
   top: -10%;
-  padding: 0;
+  padding: 0; /*move left */
   opacity: 0;
   width: 100%;
   text-align: center;
-  visibility: hidden;
-  display: table-cell;
-  vertical-align: middle;
+  visibility: hidden; /*don't allow see */
+  display: table-cell; /*move up */
+  vertical-align: middle; /* in the middle of page */
   transform: perspective(600px) rotateX(10deg);
   transition: all 0.5s cubic-bezier(0.7, 0, 0.36, 0.63);
 }
@@ -64,7 +69,7 @@ nav ul li a{
   color:white;
   width: 100%;
   display: block;
-  padding: 8px 0 0;
+  padding: 35px 0 0;
   letter-spacing: -0.06em;
 }
 nav ul li a:hover{
@@ -85,13 +90,14 @@ nav.open ul li {
 }
 /*Menu bar logo and menu styles general*/
 /*Logo*/
+
 .logo,
 .menu{
   position: absolute;
-  z-index: 2000;
+  z-index: 1600;
 }
 .logo{
-  left:10%;
+  left:15px;
   top:-4px;
   width: 70px;
   height: 74px;
@@ -105,7 +111,9 @@ nav.open ul li {
 nav.solid #logo .logo {
   background-image: url(../img/laboratoria.svg);
 }
-
+.logo img{
+  z-index: 1700;
+}
 /*Hamburger*/
 .menu{
   top:0;
@@ -140,10 +148,7 @@ nav.solid #logo .logo {
   background: #f7b617;
   transition: all 0.3s;
 }
-#toggle:hover {
-  transition: top 0.4s;
-}
-/*Javascript style toggle for menu appear and desappear style background*/
+
 .solid #toggle .menu {
   background: #fff;
 }
@@ -154,25 +159,21 @@ nav.solid #logo .logo {
   background-color: #fff;
 }
 /*Javascript style toggle for menu hamburger appear and desappear*/
+/* disappear X */
 .open .menu {
-  background: none !important;
+  background: none !important;  /*remove the main line of hamburger*/
 }
 .open .menu:after {
-  top: 0 !important;
-  background: #fff !important;
+  top: 0 !important; /* move up */
+  background: #fff !important; /*change color */
   transform: rotate(45deg);
 }
 .open .menu:before {
-  top: 0 !important;
-  background: #fff !important;
+  top: 0 !important; /* move up */
+  background: #fff !important; /*change color */
   transform: rotate(-45deg);
 }
-.overflow-hidden{
-  overflow: hidden;
-}
 
-.box-head {
-  background-color: black;
-  width: 100%;
-  height: 400px;
+.overflow-hidden{
+  overflow: hidden!important;
 }
