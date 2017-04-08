@@ -44,15 +44,6 @@ window.addEventListener("scroll", function(){
 
 function createLiPictures(){
 
-  //   <div class="grid">
-  //     <figure>
-  //       <div CLASS ="SOMBRA">
-  //       <img src="assets/img/students/5.png" alt="Fiorella Quispe">
-  //       <figcaption class="center">
-  //         <span>Fiorella Quispe</span>
-  //       </figcaption>
-  //     </figure>
-  //   </div>
   for (var i = 1; i < 55; i++) {
     var grid = document.createElement("div");
     grid.setAttribute("class","grid");
