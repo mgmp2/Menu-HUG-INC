@@ -44,12 +44,12 @@ window.addEventListener("scroll", function(){
 
 function createLiPictures(){
 
-  //   <div class="grid"> box
+  //   <div class="grid">
   //     <figure>
   //       <div CLASS ="SOMBRA">
   //       <img src="assets/img/students/5.png" alt="Fiorella Quispe">
   //       <figcaption class="center">
-  //         Fiorella Quispe
+  //         <span>Fiorella Quispe</span>
   //       </figcaption>
   //     </figure>
   //   </div>
@@ -58,6 +58,8 @@ function createLiPictures(){
     grid.setAttribute("class","grid");
     var fig = document.createElement("figure");
     /* start children*/
+    var div = document.createElement("div");
+    div.setAttribute("class","sombra");
     var img= document.createElement("img");
     img.setAttribute("src","assets/img/students/"+i+".png");
     img.setAttribute("alt",coders[i-1]);
@@ -67,6 +69,7 @@ function createLiPictures(){
     /*finish childredn */
     figcap.appendChild(span);
     fig.appendChild(figcap);
+    fig.appendChild(div);
     fig.appendChild(img);
     grid.appendChild(fig);
     listaCoder.appendChild(grid);

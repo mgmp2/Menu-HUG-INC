@@ -1,70 +1,66 @@
 /* GRID */
-
-#coders{
-  position: relative;
+div .grid{
   display: inline-block;
+}
+#coders{
   margin-top: 100px;
   text-align: center;
+  position: relative;
+
 }
-.grid {
-    display: inline-block;
-    /*background-color: #f6feda;*/
-    border: 0;
-    position: relative;
-    margin: 0px;
-}
-.grid figure {
+.grid figure{
+  position: relative;
+
   margin: 0;
-
+  /*z-index: 1;*/
+  overflow: hidden;
 
 }
+figure > .center{
+  position: absolute;
+  z-index: 100;
+  font-size: 40px;
+  display: table-cell;
+  vertical-align: middle;
+  right: 15%;
+  top: 49%;
+  color: white;
+  opacity: 0;
+}
 
+.sombra{
+  position: absolute;
+  width: 355px;
+  height:355px;
+  z-index: 200;
+}
+.sombra:hover{
+  overflow: hidden;
+  opacity: 1;
+  cursor:pointer;
+  z-index: 600;
+  background-color: rgba(249, 169, 26, 0.52);
+  /*transform: scale(1.2); /*crece*/*/
+  z-index: 199;
+}
+figure:hover .center {
+  opacity: 1;
+}
+figure:hover img {
+  transform: scale(1.2); /*crece*/
+
+}
 img{
   width: 350px;
   height: 350px;
-  transition: all 0.3s;
-  /*overflow: hidden;*/
 
-}
-.grid img{
-  overflow: hidden;
-}
-
-.grid:hover img {
-  position: relative;
-  overflow: hidden;
-  top: -53%;
-  color: white;
-  opacity: 2  ;
-  background-color: red;
-  transform: scale(1.2);
-  -webkit-transform:scale(1.2);
-  -moz-transform:scale(1.2);
-  -ms-transform:scale(1.2);
-  -o-transform:scale(1.2);
-}
-figcaption{
-  position: absolute;
-/* text-align: center; */
-    opacity: 0;
-    /* vertical-align: middle; */
-    font-size: 40px;
-    top: 50%;
-}
-figure:hover .center{
-  opacity: 2;
-  position: relative;
-  display: table-cell;
-  vertical-align: middle;
-  background-color: yellow;
-  color: white;
 }
 
 .box figure figcaption{
   opacity: 1;
 }
 
-.tile figure figcaption{
+.tile figure span{
   text-align: center;
 }
 .box-header{
@@ -72,7 +68,6 @@ figure:hover .center{
   height: 300px;
     width: 100%;
 }
-
 /*letters*/
 .contenedor {
 	margin: auto;
