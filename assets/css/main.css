@@ -1,10 +1,31 @@
+body {
+	font-family: monospace;
+  margin: 0px;
+  box-sizing: border-box;
+}
 /*Navgation general styles*/
 /*Background Menu*/
+
+nav {
+  top : 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  height: 80px;
+  z-index: 1000;
+  margin-top: 0;
+  position: fixed;
+  padding-top: 0px;
+  background:rgba(247, 182, 23, 0.81);
+  transition: all 0.65 cubic-bezier(0.7, 0.01, 0.3, 1);
+}
+
 nav .nav-background {
   top: 0px;
   opacity:0; /*disapeear */
   width: 100%;
-  z-index: 1500;
+  height: 100%
+  z-index: 1000;
   display: table;
   background: none;
   position: absolute;
@@ -24,6 +45,9 @@ nav.open {
   -o-transition: none;
   -moz-transition: none;
   -webkit-transition: none;
+}
+.header-in{
+  background-color: rgba(247, 182, 23, 0.81);
 }
 /*Navigation list*/
 nav ul {
@@ -124,10 +148,7 @@ nav.solid #logo .logo {
   background: #f7b617;
   transition: all 0.3s;
 }
-/*#toggle:hover {
-  transition: top 0.4s;
-}
-/*Javascript style toggle for menu appear and desappear style background*/
+
 .solid #toggle .menu {
   background: #fff;
 }
@@ -151,4 +172,8 @@ nav.solid #logo .logo {
   top: 0 !important; /* move up */
   background: #fff !important; /*change color */
   transform: rotate(-45deg);
-}*/
+}
+
+.overflow-hidden{
+  overflow: hidden!important;
+}

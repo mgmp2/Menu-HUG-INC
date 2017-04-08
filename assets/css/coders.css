@@ -1,48 +1,70 @@
 /* GRID */
-#lista li{
-  display: inline-block;
-}
+
 #coders{
+  position: relative;
+  display: inline-block;
   margin-top: 100px;
   text-align: center;
+}
+.grid {
+    display: inline-block;
+    /*background-color: #f6feda;*/
+    border: 0;
+    position: relative;
+    margin: 0px;
+}
+.grid figure {
+  margin: 0;
+
 
 }
-figure img{
+
+img{
   width: 350px;
-  height:350px;
+  height: 350px;
+  transition: all 0.3s;
+  /*overflow: hidden;*/
+
 }
-li figure{
-  position: relative;
-  margin: 0;
+.grid img{
   overflow: hidden;
 }
-.box figcaption > span{
+
+.grid:hover img {
+  position: relative;
+  overflow: hidden;
+  top: -53%;
+  color: white;
+  opacity: 2  ;
+  background-color: red;
+  transform: scale(1.2);
+  -webkit-transform:scale(1.2);
+  -moz-transform:scale(1.2);
+  -ms-transform:scale(1.2);
+  -o-transform:scale(1.2);
+}
+figcaption{
   position: absolute;
-  font-size: 40px;
+/* text-align: center; */
+    opacity: 0;
+    /* vertical-align: middle; */
+    font-size: 40px;
+    top: 50%;
+}
+figure:hover .center{
+  opacity: 2;
+  position: relative;
   display: table-cell;
   vertical-align: middle;
-  top: 32%;
-  left: 10%;
+  background-color: yellow;
   color: white;
-
 }
 
-.sombra{
-  position: absolute;
-  width: 350px;
-  height:350px;
-  /*z-index: 200;*/
-}
-.sombra:hover{
-  background-color: rgba(249, 169, 26, 0.52);
-  z-index: 600;
-
-}
 .box figure figcaption{
   opacity: 1;
 }
 
-.tile figure span{
+.tile figure figcaption{
   text-align: center;
 }
 .box-header{
@@ -50,10 +72,8 @@ li figure{
   height: 300px;
     width: 100%;
 }
-body {
-	font-family: monospace;
-  margin: 0px;
-}
+
+/*letters*/
 .contenedor {
 	margin: auto;
 	display: table;
