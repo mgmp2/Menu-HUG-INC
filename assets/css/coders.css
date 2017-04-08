@@ -1,43 +1,61 @@
 /* GRID */
-#lista li{
+div .grid{
   display: inline-block;
 }
 #coders{
   margin-top: 100px;
   text-align: center;
+  position: relative;
 
 }
-figure img{
-  width: 350px;
-  height:350px;
-}
-li figure{
+.grid figure{
   position: relative;
+
   margin: 0;
+  /*z-index: 1;*/
   overflow: hidden;
+
 }
-.box figcaption > span{
+figure > .center{
   position: absolute;
+  z-index: 100;
   font-size: 40px;
   display: table-cell;
   vertical-align: middle;
-  top: 32%;
-  left: 10%;
+  right: 15%;
+  top: 49%;
   color: white;
-
+  opacity: 0;
 }
 
 .sombra{
   position: absolute;
-  width: 350px;
-  height:350px;
-  /*z-index: 200;*/
+  width: 355px;
+  height:355px;
+  z-index: 200;
 }
 .sombra:hover{
-  background-color: rgba(249, 169, 26, 0.52);
+  overflow: hidden;
+  opacity: 1;
+  cursor:pointer;
   z-index: 600;
+  background-color: rgba(249, 169, 26, 0.52);
+  /*transform: scale(1.2); /*crece*/*/
+  z-index: 199;
+}
+figure:hover .center {
+  opacity: 1;
+}
+figure:hover img {
+  transform: scale(1.2); /*crece*/
 
 }
+img{
+  width: 350px;
+  height: 350px;
+
+}
+
 .box figure figcaption{
   opacity: 1;
 }
